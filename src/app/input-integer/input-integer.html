@@ -1,0 +1,8 @@
+<div class="input-group input-group-sm">
+  <button class="btn btn-primary" type="button" (click)="downQuantity()">-</button>
+  <input type="text"
+         class="form-control text-center"
+         [(ngModel)]="quantity"
+         (keyup)="onChangeQuantity($event)">
+  <button class="btn btn-primary" type="button" (click)="upQuantity()">+</button>
+</div>

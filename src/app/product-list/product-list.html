@@ -1,0 +1,28 @@
+<table class="table text-center" [ngClass]="{'table-dark': isDarkMode, 'table-light': !isDarkMode}">
+    <thead >
+        <tr>
+            <th scope="col">Portada</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">stock</th>
+            <th scope="col">cantidad</th>
+            <th scope="col">Compra</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products" [ngClass]="{'clearence': product.clearence}"> 
+            <td><img [src]="product.img" [alt]="product.name" style="width: 100px; height: 100px; object-fit: cover;"></td>
+            <td>{{product.name}}</td>
+            <td>{{product.price | currency}}</td>
+            <td>{{product.description}}</td>
+            <td ><span class="badge text-bg-danger" *ngIf="product.stock==0" >SIN STOCK</span></td>
+            <td>
+                <app-input-integer [(quantity)]="product.quantity" [max]="product.stock" *ngIf="product.stock"></app-input-integer>
+            </td>
+            <td>
+                <button *ngIf="product.stock>0" class="btn btn-primary" (click)="addToCart(product)">add</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

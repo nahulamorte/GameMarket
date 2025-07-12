@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+/* Tema oscuro */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+
+
+  .table {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+
+    th, td {
+      background-color: #1e1e1e;
+      color: #f1f1f1;
+      border-color: #333;
+    }
+  }
+
+  .btn-primary {
+    background-color: #3b82f6;
+    border-color: #3b82f6;
+  }
+
+  .badge {
+    background-color: #dc3545;
+    color: #fff;
+  }
+}
+
+*{
+    margin: 0;
+    box-sizing:border-box;
+    padding: 0;
+}
+
