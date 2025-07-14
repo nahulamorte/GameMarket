@@ -24,7 +24,7 @@ export class ShoppingCart implements OnInit{
   }
 
   finalizarCompra() {
-    this.cart.vaciarCarrito(); // este método lo agregás abajo en el servicio
+    this.cart.vaciarCarrito(); 
   }
 
 }
