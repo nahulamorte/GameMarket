@@ -1,8 +1,14 @@
 <h2>CARRITO DE COMPRAS</h2>
-<ul class="w-100 ps-0 ms-0"> 
-    @for (product of cartList$ | async; track $index) {
+
+<ul class="w-100 ps-0 ms-0">
+  @for (product of cartList$ | async; track $index) {
     <li>
-        {{product.name}}: {{product.quantity}} 
+      {{ product.name }}: {{ product.quantity }}
     </li>
-    }
+  }
 </ul>
+
+<!-- Botón de compra -->
+<button class="btn btn-success mt-3" (click)="finalizarCompra()">
+  comprar
+</button>

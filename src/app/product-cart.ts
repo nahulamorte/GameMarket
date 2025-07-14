@@ -27,4 +27,8 @@ export class ProductCartService {
     }
     this.cartList.next(this._cartList);
   }
+
+  vaciarCarrito() {
+    this.cartList.next([]);
+  }
 }
